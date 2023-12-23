@@ -10,13 +10,8 @@ import 'package:instagram_clone/state/auth/providers/is_logged_in.dart'
 import 'firebase_options.dart';
 
 // * For Log Function
-import 'dart:developer' as devtools show log;
 
 part 'main.g.dart';
-
-extension Log on Object {
-  void log() => devtools.log(toString());
-}
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
