@@ -1,27 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'main.dart';
+part of 'index.dart';
 
 // **************************************************************************
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext _context) => myApp(_context);
-}
-
-class MainView extends HookConsumerWidget {
-  const MainView({Key? key}) : super(key: key);
+class LoginView extends ConsumerWidget {
+  const LoginView({Key? key}) : super(key: key);
 
   @override
   Widget build(
     BuildContext _context,
     WidgetRef _ref,
   ) =>
-      mainView(
+      loginView(
         _context,
         _ref,
       );

@@ -9,6 +9,7 @@ import 'package:instagram_clone/state/auth/providers/is_logged_in.dart'
     show isLoggedInProvider;
 import 'package:instagram_clone/state/providers/is_loading.dart';
 import 'package:instagram_clone/views/components/loading/loading_screen.dart';
+import 'package:instagram_clone/views/login/index.dart';
 import 'firebase_options.dart';
 
 // * For Log Function
@@ -59,31 +60,6 @@ Widget mainView(BuildContext context, WidgetRef ref) {
         // LoadingScreen.instance().show(context: context, text: "hi");
         await ref.read(authStateNotifierProvider.notifier).logOut();
       },
-    ),
-  );
-}
-
-@cwidget
-Widget loginView(WidgetRef ref, BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(title: Text("LoginView")),
-    body: Column(
-      children: [
-        TextButton(
-            onPressed: () async {
-              await ref
-                  .read(authStateNotifierProvider.notifier)
-                  .loginWithFacebook();
-            },
-            child: const Text("Facebook")),
-        TextButton(
-            onPressed: () async {
-              await ref
-                  .read(authStateNotifierProvider.notifier)
-                  .loginWithGoogle();
-            },
-            child: const Text("Google"))
-      ],
     ),
   );
 }
