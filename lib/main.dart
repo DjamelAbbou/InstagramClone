@@ -25,25 +25,30 @@ void main() async {
 @swidget
 Widget myApp(BuildContext context) {
   return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData.dark(),
-      themeMode: ThemeMode.dark,
-      home: withSafeArea(Consumer(builder: (context, ref, child) {
-        ref.listen<bool>(
-          isLoadingProvider,
-          (_, isLoading) {
-            if (isLoading) {
-              LoadingScreen.instance().show(context: context);
-            } else {
-              LoadingScreen.instance().hide();
-            }
-          },
-        );
+    debugShowCheckedModeBanner: false,
+    darkTheme: ThemeData.dark(),
+    themeMode: ThemeMode.dark,
+    home: withSafeArea(
+      Consumer(
+        builder: (context, ref, child) {
+          ref.listen<bool>(
+            isLoadingProvider,
+            (_, isLoading) {
+              if (isLoading) {
+                LoadingScreen.instance().show(context: context);
+              } else {
+                LoadingScreen.instance().hide();
+              }
+            },
+          );
 
-        final isLoggedIn = ref.watch(isLoggedInProvider);
+          final isLoggedIn = ref.watch(isLoggedInProvider);
 
-        return isLoggedIn ? const MainView() : const LoginView();
-      })));
+          return isLoggedIn ? const MainView() : const LoginView();
+        },
+      ),
+    ),
+  );
 }
 
 Widget withSafeArea(Widget child) {
