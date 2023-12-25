@@ -6,15 +6,11 @@ part of 'main.dart';
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class MyApp extends ConsumerWidget {
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(
-    BuildContext _context,
-    WidgetRef _ref,
-  ) =>
-      myApp(_ref);
+  Widget build(BuildContext _context) => myApp(_context);
 }
 
 class MainView extends HookConsumerWidget {
@@ -39,5 +35,8 @@ class LoginView extends ConsumerWidget {
     BuildContext _context,
     WidgetRef _ref,
   ) =>
-      loginView(_ref);
+      loginView(
+        _ref,
+        _context,
+      );
 }

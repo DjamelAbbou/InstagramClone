@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone/views/components/constants/strings.dart';
 import 'package:instagram_clone/views/components/loading/loading_screen_controller.dart';
 
+import 'dart:developer' show log;
+
 class LoadingScreen {
   LoadingScreen._sharedInstance();
   static final LoadingScreen _shared = LoadingScreen._sharedInstance();
@@ -29,7 +31,9 @@ class LoadingScreen {
 
   LoadingScreenController? showOverlay(
       {required BuildContext context, required String text}) {
+    print('before accessing overlay');
     final state = Overlay.of(context);
+    print('after accessing overlay');
     if (state == null) {
       return null;
     }
