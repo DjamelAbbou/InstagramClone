@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:instagram_clone/views/components/constants/app_colors.dart';
 import 'package:instagram_clone/views/components/constants/strings.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 part 'google_button.g.dart';
 
@@ -12,8 +13,8 @@ Widget googleButton() {
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(
-          Icons.search,
+        FaIcon(
+          FontAwesomeIcons.google,
           color: AppColors.googleColor,
         ),
         const SizedBox(

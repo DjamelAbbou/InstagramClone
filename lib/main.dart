@@ -10,6 +10,7 @@ import 'package:instagram_clone/state/auth/providers/is_logged_in.dart'
 import 'package:instagram_clone/state/providers/is_loading.dart';
 import 'package:instagram_clone/views/components/loading/loading_screen.dart';
 import 'package:instagram_clone/views/login/index.dart';
+import 'package:instagram_clone/views/main/index.dart';
 import 'firebase_options.dart';
 
 // * For Log Function
@@ -53,18 +54,4 @@ Widget myApp(BuildContext context) {
 
 Widget withSafeArea(Widget child) {
   return SafeArea(child: child);
-}
-
-@hcwidget
-Widget mainView(BuildContext context, WidgetRef ref) {
-  return Scaffold(
-    appBar: AppBar(title: Text("MainView")),
-    body: TextButton(
-      child: Center(child: Text("LogOut")),
-      onPressed: () async {
-        // LoadingScreen.instance().show(context: context, text: "hi");
-        await ref.read(authStateNotifierProvider.notifier).logOut();
-      },
-    ),
-  );
 }

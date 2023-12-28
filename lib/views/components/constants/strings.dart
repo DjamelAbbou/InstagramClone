@@ -2,10 +2,13 @@ import 'package:flutter/foundation.dart';
 
 @immutable
 class Strings {
+  static const areYouSureThatYouWantToLogOutOfTheApp =
+      'Are you sure that you want to log out of the app';
+  static const logOut = 'Logout';
   static const appName = 'Instant-gram!';
   static const welcomeToAppName = 'Welcome to ${Strings.appName}';
   static const youHaveNoPosts =
-      'You have not made a post yet. Press either the video-upload or the photo-upload buttons to the top of the screen in order to upload your first post!';
+      'You have not made a post yet. Press the the photo-upload button to the top of the screen in order to upload your first post!';
   static const noPostsAvailable =
       "Nobody seems to have made any posts yet. Why don't you take the first step and upload your first post?!";
   static const enterYourSearchTerm =

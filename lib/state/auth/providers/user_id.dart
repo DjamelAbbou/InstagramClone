@@ -6,4 +6,4 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'user_id.g.dart';
 
 @riverpod
-UserId? userIdProvider(ref) => ref.watch(authStateNotifierProvider).userId;
+UserId? userId(ref) => ref.watch(authStateNotifierProvider).userId;
