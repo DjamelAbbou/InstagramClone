@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:instagram_clone/state/posts/models/post.dart';
 import 'package:instagram_clone/views/components/post/thumbnail.dart';
+import 'package:instagram_clone/views/post_comments/index.dart';
 
 part 'grid.g.dart';
 
@@ -21,7 +22,11 @@ Widget postsGridView(BuildContext context,
       return PostThumbnailView(
         post: post,
         onTapped: () {
-          // TODO: NAVIGATE TO THE POST DETAILS VIEW
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) {
+              return PostCommentsView(postId: post.postId);
+            },
+          ));
         },
       );
     },

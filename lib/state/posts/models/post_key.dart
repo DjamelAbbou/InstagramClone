@@ -4,6 +4,8 @@ import 'package:flutter/foundation.dart' show immutable;
 class PostKey {
   static const userId = 'uid';
   static const message = 'message';
+  static const bidPrice = 'bid_price';
+  static const bidEndingDate = 'bid_ending_date';
   static const createdAt = 'created_at';
   static const thumbnailUrl = 'thumbnail_url';
   static const fileUrl = 'file_url';

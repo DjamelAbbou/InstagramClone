@@ -4,6 +4,10 @@ import 'package:flutter/foundation.dart';
 class Strings {
   static const areYouSureThatYouWantToLogOutOfTheApp =
       'Are you sure that you want to log out of the app';
+  static const areYouSureThatYouWantToDeleteThis =
+      'Are you sure you want to delete';
+  static const delete = 'Delete';
+  static const cancel = 'Cancel';
   static const logOut = 'Logout';
   static const appName = 'Instant-gram!';
   static const welcomeToAppName = 'Welcome to ${Strings.appName}';
@@ -27,6 +31,9 @@ class Strings {
 
   static const createNewPost = 'Create New Post';
   static const pleaseWriteYourMessageHere = 'Please write your message here';
+  static const pleaseEnterYourStartingBidPrice =
+      'Please enter your starting bid price';
+  static const chooseEndingDate = 'Choose Ending Date';
 
   static const noCommentsYet =
       'Nobody has commented on this post yet. You can change that though, and be the first person who comments!';
